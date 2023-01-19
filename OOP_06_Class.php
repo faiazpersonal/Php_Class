@@ -1,5 +1,5 @@
 <?php 
-/*__get& __set,Interface basic,Interface Inheritence,
+/*__get& __set,Interface basic,Interface Inheritence,Polymorphism,Trait
 ================================================================================================*/
 
 // __get& __set ================================================================================
