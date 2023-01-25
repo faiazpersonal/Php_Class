@@ -9,8 +9,8 @@ if(isset($_SESSION['mysession']))
 
 if(isset($_POST['check']))
 {
-	$username = "araman";
-	$password = "123456";
+	$username = "faiaz";
+	$password = "123";
 
 	if($_POST['username'] == $username && $_POST['pass'] == $password)
 	{
