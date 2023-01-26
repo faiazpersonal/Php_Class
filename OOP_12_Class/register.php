@@ -1,4 +1,5 @@
 <?php
+// Registration & login for authorization with text file
 require_once('common.php');
 
 if(isset($_POST['submitBtn']))
