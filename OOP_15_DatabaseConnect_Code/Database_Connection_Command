@@ -1,0 +1,61 @@
+**/Inner Join **/
+select * from students inner join city
+on students.cid = city.id;
+
+select * from students s inner join city c
+on s.cid = c.id;
+
+SELECT s.id,s.name,s.marks,s.gender,c.cityname
+FROM students s INNER JOIN city c
+ON s.cid = c.id;
+
+SELECT s.id,s.name,s.marks,s.gender,c.cityname
+FROM students s INNER JOIN city c
+ON s.cid = c.id
+WHERE c.cityname = "Dhaka"
+ORDER BY s.name;
+
+**/Left Join **/
+
+select * from students left join city
+on students.cid = city.id;
+
+**/Multiple table Join **/
+
+SELECT s.name,s.marks,c.cityname,cr.course_name
+FROM students s INNER JOIN city c
+ON s.cid = c.id
+INNER JOIN courses cr
+ON s.course_id = cr.id
+WHERE c.cityname = "Dhaka";
+
+**/Group by and having clause **/
+
+SELECT c.cityname,COUNT(s.cid) FROM students s INNER JOIN city c
+ON s.cid = c.id
+GROUP BY cid;
+
+SELECT c.cityname,COUNT(s.cid) AS total FROM students s INNER JOIN city c
+ON s.cid = c.id
+WHERE age>=25 AND gender = 'm'
+GROUP BY cid;
+
+SELECT c.cityname,COUNT(s.cid) AS total FROM students s INNER JOIN city c
+ON s.cid = c.id
+WHERE age>=30
+GROUP BY cid
+ORDER BY COUNT(s.cid);
+
+SELECT c.cityname,COUNT(s.cid) AS total FROM students s INNER JOIN city c
+ON s.cid = c.id
+GROUP BY cid
+HAVING count(s.cid) >2
+ORDER BY COUNT(s.cid) DESC;
+
+**/ Sub Query **/
+
+SELECT name FROM students
+WHERE course_id = (SELECT id FROM courses WHERE course_name = "PHP");
+
+SELECT name FROM students
+WHERE course_id IN (SELECT id FROM courses WHERE course_name IN("PHP","Laravel"));
