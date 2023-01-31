@@ -9,6 +9,16 @@ P1|p2|p3..		‘tom|jhon|harry’    Match any of the pattern p1, p2, p3
 
 
 
+Mysql, Oracle, Sql Server, MongoDB
+SQL Command
+DDL		      DML		DCL		       TCL		   DQL
+🡪Create	🡪Insert	🡪Grant	    🡪Commit	   🡪select
+🡪Drop		🡪Update	🡪Revoke	🡪Rollback
+🡪Alter		🡪Delete			    🡪Save point
+🡪Truncate 
+
+
+
 
 **/Inner Join **/
 select * from students inner join city
