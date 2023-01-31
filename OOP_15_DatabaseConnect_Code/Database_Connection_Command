@@ -1,3 +1,15 @@
+REGEXP
+^			    ‘^ra’  		        Beginning of the string
+$			    ‘an$’		        End of the string
+[….]			[rms]		        Any character listed in the square bracket
+^[….]			‘^[rms]’	        Begins with any character listed between the square bracket.
+[a-z]			‘[a-h]e’		    Match within the reange
+P1|p2|p3..		‘tom|jhon|harry’    Match any of the pattern p1, p2, p3
+
+
+
+
+
 **/Inner Join **/
 select * from students inner join city
 on students.cid = city.id;
